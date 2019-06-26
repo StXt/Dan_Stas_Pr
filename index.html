@@ -6,25 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <style src="https://cdnjs.com/libraries/bulma"></style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script src="index.js"></script>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="./photo">
+    <!--<header class="has-background-black">
+        <div class="container">
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <img src="images/logo.png" class="logo tile is-child">
+                </div>
+                <nav class="tile menu is-6 is-parent">
+                    <ul class="tile menu-list">
+                        <li>Home Page</li>
+                        <li>Proposal activities</li>
+                        <li>About Us</li>
+                        <li>Contacts</li>
+                    </ul>
+                </nav>
+                <div class="tile search is-parent">
+                    test
+                </div>
+            </div>
         </div>
-        <p>hi everybody</p>
-        <p>test text</p>
-        <nav>
-            <ul>
-                <li>Home Page</li>
-                <li>Proposal activities</li>
-                <li>About Us</li>
-                <li>Contacts</li>
-            </ul>
-        </nav>
-    </header>
+    </header>-->
+    <nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="images/logo.png" width="28" height="28">
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item has-text-white">
+                    Home
+                </a>
+                <a class="navbar-item has-text-white">
+                    Proposal activities
+                </a>
+                <a class="navbar-item has-text-white">
+                    About Us
+                </a>
+                <a class="navbar-item has-text-white">
+                    Contacts
+                </a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Search</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <footer>sport site for Ukraine</footer>
     <section class="content">
       <h1>hello</h1>
