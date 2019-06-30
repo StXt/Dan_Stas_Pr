@@ -20,9 +20,44 @@
     text-transform: uppercase;
 }
 
-/*.section {
-    padding: 0;
-}*/
+/*************************************** SECTION-1 ****************************************/
+/***************************************************************************************/
+
+.circle {
+    border: 3px solid #FFDD57;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.sport-icon {
+    padding-left: 1.4rem;
+}
+
+.kinds {
+    padding: 5rem 0;
+}
+
+.kind {
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.kind-title {
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.kind-description {
+    text-align: left;
+}
 
 .custom-footer {
     padding: 1rem;
