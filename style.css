@@ -1,6 +1,25 @@
+body {
+    position: relative;
+}
+
 .header {
     background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.section {
+    padding: 0;
+}
+
+.custom-footer {
+    margin-bottom: 0;
+    width: 100vw;
+    color: #b7b7b7;
+    background-color: #4a4a4a;
+}
+
+.social-item {
+    padding: 0.5rem;
 }
