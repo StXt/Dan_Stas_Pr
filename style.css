@@ -20,17 +20,34 @@
     text-transform: uppercase;
 }
 
-/*.section {
-    padding: 0;
-}*/
+/************************************** FOOTER *****************************************/
+/***************************************************************************************/
 
 .custom-footer {
-    padding: 1rem;
+    padding: 2rem;
     width: 100vw;
+    flex: 0 0 auto;
     color: #b7b7b7;
     background-color: #4a4a4a;
 }
 
 .social-item {
-    padding: 0.5rem;
+    padding: .8rem;
+}
+
+/*********************************** CYCLE SECTION *************************************/
+/***************************************************************************************/
+
+.custom-cycle-body {
+    padding: 5rem 1rem;
+    background-image: linear-gradient(#a5a2a2, #e4e0e0);
+}
+
+.cycle-heading {
+    font-size: 3rem;
+    padding: 4rem;
+}
+
+.cycle-text {
+    padding: 4rem;
 }
