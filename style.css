@@ -2,13 +2,17 @@ body {
     position: relative;
 }
 
-h1 {
-    font-size: 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+.section {
+    padding: 0;
 }
 
 .custom-footer {
     margin-bottom: 0;
-    
+    width: 100vw;
+    color: #b7b7b7;
+    background-color: #4a4a4a;
+}
+
+.social-item {
+    padding: 0.5rem;
 }
