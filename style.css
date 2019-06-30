@@ -1,5 +1,6 @@
 body {
-    position: relative;
+    margin: 0;
+    min-height: 100%;
 }
 
 .header {
@@ -9,13 +10,10 @@ body {
     background-repeat: no-repeat;
 }
 
-.section {
-    padding: 0;
-}
-
 .custom-footer {
-    margin-bottom: 0;
+    padding: 2.5rem;
     width: 100vw;
+    flex: 0 0 auto;
     color: #b7b7b7;
     background-color: #4a4a4a;
 }
