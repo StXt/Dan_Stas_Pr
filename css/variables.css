@@ -1,2 +1,14 @@
-body {
-  background-color: #000; }
+.competition-description .big-button {
+  background-color: #ffdd57;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 290486px;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
+  justify-content: center;
+  white-space: nowrap; }
+
+.custom-footer {
+  display: flex;
+  justify-content: space-around; }

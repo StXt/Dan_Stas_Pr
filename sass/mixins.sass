@@ -1,13 +1,10 @@
-nav
-  ul
-    margin: 0
-    padding: 0
-    list-style: none
+$font-base: 1rem
 
-  li
-    display: inline-block
+@mixin sample
+  font-size: $font-base
+  padding: 1.1rem 0
 
-  a
-    display: block
-    padding: 6px 12px
-    text-decoration: none
+
+.competition-description
+  p
+    @include sample
