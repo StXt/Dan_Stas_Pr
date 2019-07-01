@@ -1,0 +1,23 @@
+{
+  "name": "shutepal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StXt/Dan_Stas_Pr.git"
+  },
+  "author": "Den Stas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StXt/Dan_Stas_Pr/issues"
+  },
+  "homepage": "https://github.com/StXt/Dan_Stas_Pr#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
