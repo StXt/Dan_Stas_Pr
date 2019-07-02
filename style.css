@@ -122,8 +122,9 @@
 /*********************************** CYCLE SECTION *************************************/
 /***************************************************************************************/
 
-.custom-cycle-body {
+.cycle-service {
     padding: 5rem 1rem;
+    display: flex;
     background-image: linear-gradient(#a5a2a2, #e4e0e0);
 }
 
