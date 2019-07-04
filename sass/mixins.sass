@@ -1,10 +1,42 @@
-$font-base: 1rem
+=mobile
+  @media (max-width: 575px)
+    @content
 
-@mixin sample
-  font-size: $font-base
-  padding: 1.1rem 0
+=tablet-portrait
+  @media (min-width: 576px)
+    @content
 
+=tablet-landscape
+  @media (min-width: 768px)
+    @content
 
-.competition-description
-  p
-    @include sample
+=desktop
+  @media (min-width: 992px)
+    @content
+
+=large-desktop
+  @media (min-width: 1200px)
+    @content
+
+.header__title
+  +mobile
+    padding: .5rem
+    font-size: 1.5rem
+    color: red
+
+  +tablet-portrait
+    font-size: 5rem
+    color: white
+
+  +tablet-landscape
+    color: blue
+
+  +desktop
+    font-size: 6.5rem
+    color: orange
+
+  +large-desktop
+    color: green
+
+  padding: 3rem
+  font-weight: bold
