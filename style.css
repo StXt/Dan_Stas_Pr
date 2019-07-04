@@ -1,3 +1,6 @@
+/*************************************** HEADER *******************************************/
+/******************************************************************************************/
+
 .header {
     background-image: url("images/background.jpg");
     background-size: cover;
@@ -23,6 +26,82 @@
     padding: 1rem;
     text-transform: uppercase;
 }
+/*************************************** SPINNER ******************************************/
+/******************************************************************************************/
+
+/* .spinner {
+    margin: 2rem auto;
+    width: 14rem;
+    height: 14rem;
+    background: rgb(49, 37, 32);
+    overflow: hidden;
+    animation: move .6s infinite;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 30px #222121b7;
+}
+
+.spinner__triangle {
+    width: 0;
+    height: 0;
+    border-right: 7rem solid transparent;
+    border-left: 7rem solid transparent;
+    border-top: 7rem solid rgba(97, 28, 177, 0.924);
+}
+
+.spinner__inner--round {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 30px #222121b7 inset;
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(36deg);
+    }
+
+    20% {
+        transform: rotate(72deg);
+    }
+    30% {
+        transform: rotate(108deg);
+    }
+    40% {
+        transform: rotate(144deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    60% {
+        transform: rotate(216deg);
+    }
+
+    70% {
+        transform: rotate(252deg);
+    }
+
+    80% {
+        transform: rotate(288deg);
+    }
+
+    90% {
+        transform: rotate(324deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
 
 /*************************************** SECTION-1 ****************************************/
 /******************************************************************************************/
