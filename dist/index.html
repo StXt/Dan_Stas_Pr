@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ShutePal</title>
+    <title>Bikezilla</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="wrapper">
@@ -17,8 +15,8 @@
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
-                            <a class="navbar-item">
-                                <img alt="logo">
+                            <a class="navbar-logo navbar-item">
+                                
                             </a>
                             <span class="navbar-burger burger">
                                 <span></span>
@@ -32,10 +30,10 @@
                                     Home
                                 </a>
                                 <a href="" class="navbar-item link">
-                                    Test
+                                    About Us
                                 </a>
                                 <a href="" class="navbar-item link">
-                                    Test 1
+                                    Contacts
                                 </a>
                             </div>
                         </div>
@@ -45,9 +43,9 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <p class="title has-text-white home-title">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        Welcome to Bikezilla
                     </p>
-                    <a class="button is-warning is-rounded big-button">Get service</a>
+                    <a class="button is-warning is-rounded big-button">Find bike</a>
                 </div>
             </div>
         </header>
@@ -56,6 +54,37 @@
                 <div class="spinner__triangle"></div>
                 <div class="spinner__inner"></div>
             </div>
+        </section>
+        <section class="sign-up section">
+            <div class="sign-up__container">
+            <form class="sign-up__form form" method="post">
+                <label for="name" class="form__item field">
+                    <span class="field__name">Name</span>
+                    <input type="text"  id="name" class="field__input">
+                </label>
+                <label class="form__item field">
+                    <span class="field__name">Surname</span>
+                    <input type="text"  id="surname" class="field__input">
+                </label>
+                <label for="name" class="form__item field">
+                    <span class="field__name">Email</span>
+                    <input type="text"  id="email" class="field__input">
+                </label>
+                <label for="name" class="form__item field">
+                    <span class="field__name">Login</span>
+                    <input type="text"  id="login" class="field__input">
+                </label>
+                <label for="name" class="form__item field">
+                    <span class="field__name">Password</span>
+                    <input type="text"  id="password" class="field__input">
+                </label>
+                <label for="name" class="form__item field">
+                    <span class="field__name">Reenter password</span>
+                    <input type="text"  id="reenter" class="field__input">
+                </label>
+                <input type="submit" value="Send" class="form__button">
+            </form>
+        </div>
         </section>
         <section class="section has-text-centered">
             <div class="container">
@@ -116,7 +145,6 @@
                             </p>
                         </article>
                         <div class="column cyclist">
-                            <img src="./images/cycling.png" alt="Cyclist" class="bicylce">
                         </div>
                     </div>
                 </div>
@@ -126,17 +154,15 @@
             <div class="container">
                 <h2 class="title">Type of bicycles</h2>
                 <div class="columns">
-                    <div class="column">
+                    <div class="column road-bike">
                         <div class="bike-title">
                             Road bike
                         </div>
-                        <img src="images/bikes/first.png" class="image" alt="road bike">
                     </div>
-                    <div class="column">
+                    <div class="column trick-bike">
                         <div class="bike-title">
                             BMX/Trick Bike
                         </div>
-                        <img src="images/bikes/second.png" class="image" alt="trick bike">
                     </div>
                 </div>
             </div>
@@ -150,8 +176,7 @@
             </div>
         </section>
         <section class="cycle-service">
-            <div class="cycle-col">
-                <img src="images/competition/logo.png" class="cycle-col__image" alt="Tour de france">
+            <div class="cycle-col tour-de-france">
             </div>
             <div class="cycle-col">
                 <h3 class="cycle-col__title">Tour de france</h3>
