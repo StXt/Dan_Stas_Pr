@@ -48,10 +48,10 @@ france.setAttribute('alt', 'Tour de France');
 france.classList.add('cycle-col__image');
 franceDiv.appendChild(france);*/
 
-const signBtn = document.querySelector('.toggler__button');
-      /*signBtn = document.querySelector('.sign__button');*/
-/*signUpBtn.addEventListener('click', toggleForm);*/
-signBtn.addEventListener('click', toggleForm);
+const signUpBtn = document.querySelector('.sign-up .toggler__button'),
+      signInBtn = document.querySelector('.sign-in .toggler__button');
+signUpBtn.addEventListener('click', toggleForm);
+signInBtn.addEventListener('click', toggleForm);
 
 function toggleForm(event) {
     event.preventDefault();
@@ -66,21 +66,20 @@ const users = [],
 
 
 
-const signUpData = document.querySelector('.sign-up__container .form__button');
+const signUpData = document.querySelector('.sign__container .form__button');
 signUpData.addEventListener('click', sendData);
 
 function sendData(event) {
     event.preventDefault();
-    const name = document.querySelectorAll('.sign-up__container .field__input')[0],
-        email = document.querySelectorAll('.sign-up__container .field__input')[1],
-        password = document.querySelectorAll('.sign-up__container .field__input')[2],
-        rePassword = document.querySelectorAll('.sign-up__container .field__input')[3];
+    const name = document.querySelectorAll('.sign__container .field__input')[0],
+        email = document.querySelectorAll('.sign__container .field__input')[1],
+        password = document.querySelectorAll('.sign__container .field__input')[2],
+        rePassword = document.querySelectorAll('.sign__container .field__input')[3];
     person.name = name.value;
     person.email = email.value;
     person.password = password.value;
     person.rePassword = rePassword.value;
     users.push(person);
-    console.log(users);
 }
 
 
