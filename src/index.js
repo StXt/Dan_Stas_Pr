@@ -39,10 +39,3 @@ france.src = francePng;
 france.setAttribute('alt', 'Tour de France');
 france.classList.add('cycle-col__image');
 franceDiv.appendChild(france);
-
-const franceDiv = document.getElementsByClassName('tour-de-france')[0];
-const france = new Image();
-france.src = francePng;
-france.setAttribute('alt', 'Tour de France');
-france.classList.add('cycle-col__image');
-franceDiv.appendChild(france);
