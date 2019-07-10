@@ -71,6 +71,10 @@
 /**************************************** FORM ********************************************/
 /******************************************************************************************/
 
+.sign-hello {
+  color: red;
+}
+
 .sign-up {
   width: 100%;
   height: 20rem;
@@ -236,24 +240,25 @@
 }
 
 .competition-description p {
-    font-size: 1rem;
-    padding: 1.1rem 0;
-  }
+  font-size: 1rem;
+  padding: 1.1rem 0;
+}
   
 
   
-  .competition-description .big-button {
-    background-color: #ffdd57;
-    border-color: transparent;
-    color: rgba(0, 0, 0, 0.7);
-    border-radius: 290486px;
-    padding-left: 1em;
-    padding-right: 1em;
-    cursor: pointer;
-    justify-content: center;
-    white-space: nowrap; }
+.competition-description .big-button {
+  background-color: #ffdd57;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 290486px;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
+  justify-content: center;
+  white-space: nowrap; 
+}
   
-  .custom-footer {
-    display: flex;
-    justify-content: space-around;
+.custom-footer {
+  display: flex;
+  justify-content: space-around;
 }
