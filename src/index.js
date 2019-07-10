@@ -48,21 +48,21 @@ france.setAttribute('alt', 'Tour de France');
 france.classList.add('cycle-col__image');
 franceDiv.appendChild(france);*/
 
-const signUpBtn = document.querySelector('.sign-up__button'),
-      signInBtn = document.querySelector('.sign-in__button');
-signUpBtn.addEventListener('click', toggleForm);
-signInBtn.addEventListener('click', toggleForm);
+const signBtn = document.querySelector('.toggler__button');
+      /*signBtn = document.querySelector('.sign__button');*/
+/*signUpBtn.addEventListener('click', toggleForm);*/
+signBtn.addEventListener('click', toggleForm);
 
 function toggleForm(event) {
     event.preventDefault();
-    const signUp = document.querySelector('.sign-up__container'),
-          signIn = document.querySelector('.sign-in__container');
+    const signUp = document.querySelector('.sign-up'),
+          signIn = document.querySelector('.sign-in');
     signUp.classList.toggle('active');
     signIn.classList.toggle('active');
 }
 
-const user = [],
-      userData = {};
+const users = [],
+      person = {};
 
 
 
@@ -75,12 +75,12 @@ function sendData(event) {
         email = document.querySelectorAll('.sign-up__container .field__input')[1],
         password = document.querySelectorAll('.sign-up__container .field__input')[2],
         rePassword = document.querySelectorAll('.sign-up__container .field__input')[3];
-    userData.name = name.value;
-    userData.email = email.value;
-    userData.password = password.value;
-    userData.rePassword = rePassword.value;
-    user.push(userData);
-    console.log(user);
+    person.name = name.value;
+    person.email = email.value;
+    person.password = password.value;
+    person.rePassword = rePassword.value;
+    users.push(person);
+    console.log(users);
 }
 
 
