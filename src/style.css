@@ -73,23 +73,27 @@
 
 .sign-up {
   width: 100%;
-  height: 20rem;
+}
+
+.sign-up__title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .sign-up__container {
+  display: none;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 10px;
-  display: block;
-  height: 20rem;
   width: 40%;
   background-color: #ffc88c;
 }
 
 .form {
-  display: flex;
+/*  display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start;*/
 }
 
 .field {
@@ -105,10 +109,10 @@
 
 .field__name {
   display: block;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
-.field__input, .field__input:focus {
+.field__input {
   margin-left: 3rem;
   font-size: 1.5rem;
   border: none;
@@ -116,6 +120,7 @@
   height: 2rem;
   display: block;
   background-color: #ffc88c;
+  outline:none;
 }
 
 .form__button {
@@ -125,6 +130,25 @@
   margin: 1rem auto;
   display: block;
   background-color: #c9c7ff;
+  cursor: pointer;
+  outline:none;
+}
+
+.sign-in__container {
+  display: none;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 40%;
+  background-color: #ffc88c;
+}
+
+.sign-test__container {
+  display: none;
+}
+
+.active {
+  display: block;
 }
 
 /*************************************** SECTION-1 ****************************************/
@@ -165,6 +189,7 @@
 .kind-description {
   text-align: left;
 }
+
 
 /*************************************** SECTION-2 ****************************************/
 /******************************************************************************************/

@@ -1,4 +1,5 @@
 import './style.css';
+/*
 import cyclistPng from './images/cycling.png';
 import logoPng from './images/logo.png';
 import roadPng from './images/bikes/first.png';
@@ -45,4 +46,42 @@ const france = new Image();
 france.src = francePng;
 france.setAttribute('alt', 'Tour de France');
 france.classList.add('cycle-col__image');
-franceDiv.appendChild(france);
+franceDiv.appendChild(france);*/
+
+const signUpBtn = document.querySelector('.sign-up__button'),
+      signInBtn = document.querySelector('.sign-in__button');
+signUpBtn.addEventListener('click', toggleForm);
+signInBtn.addEventListener('click', toggleForm);
+
+function toggleForm(event) {
+    event.preventDefault();
+    const signUp = document.querySelector('.sign-up__container'),
+          signIn = document.querySelector('.sign-in__container');
+    signUp.classList.toggle('active');
+    signIn.classList.toggle('active');
+}
+
+const user = [],
+      userData = {};
+
+
+
+const signUpData = document.querySelector('.sign-up__container .form__button');
+signUpData.addEventListener('click', sendData);
+
+function sendData(event) {
+    event.preventDefault();
+    const name = document.querySelectorAll('.sign-up__container .field__input')[0],
+        email = document.querySelectorAll('.sign-up__container .field__input')[1],
+        password = document.querySelectorAll('.sign-up__container .field__input')[2],
+        rePassword = document.querySelectorAll('.sign-up__container .field__input')[3];
+    userData.name = name.value;
+    userData.email = email.value;
+    userData.password = password.value;
+    userData.rePassword = rePassword.value;
+    user.push(userData);
+    console.log(user);
+}
+
+
+
