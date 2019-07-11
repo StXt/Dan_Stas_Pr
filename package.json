@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/StXt/webpack-demo#readme",
   "devDependencies": {
+    "bulma": "^0.7.5",
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
