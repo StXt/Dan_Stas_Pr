@@ -1,3 +1,4 @@
+import './components/layouts/header/header'
 import "./index.pug"
 import  "./index.sass"
 import "../assets/img/logo.png"

@@ -7,32 +7,7 @@ html(lang='en')
         title ShutePal
     body
         .wrapper
-            header.header.hero.is-large
-                .hero-head
-                    nav.navbar
-                        .container
-                            .navbar-brand
-                                a.navbar-item
-                                    img(src='./assets/img/logo.png', alt='logo')
-                                span.navbar-burger.burger
-                                    span
-                                    span
-                                    span
-                            .navbar-menu
-                                .navbar-end
-                                    a.navbar-item.link(href='')
-                                        | Home
-                                    a.navbar-item.link(href='')
-                                        | Test
-                                    a.navbar-item.link(href='')
-                                        | Test 1
-                                    a.navbar-item.link.sign-up-modal(href='')
-                                        | Sign Up
-                .hero-body
-                    .container.has-text-centered
-                        h2.header__title
-                            | Welcome to ShutePal
-                        a.button.is-warning.is-rounded.big-button Get service
+            include ./components/layouts/header/header
             section.section
                 .spinner
                     .spinner__triangle
