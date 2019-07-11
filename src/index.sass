@@ -1,0 +1,260 @@
+@import 'sass/variables'
+@import 'sass/mixins'
+
+.header
+  background-image: url("../assets/img/background.jpg")
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+
+.image
+  max-width: 100%
+
+.navbar-logo
+  width: 400px
+
+.link
+  color: #ffffff
+
+.home-title
+  font-size: 4rem
+
+.big-button
+  margin-top: 1rem
+  font-size: 1.2rem
+  padding: 1rem
+  text-transform: uppercase
+
+.header__title
+  +mobile
+    padding: .5rem
+    font-size: 1.5rem
+    color: red
+
+  +tablet-portrait
+    font-size: 5rem
+    color: white
+
+  +tablet-landscape
+    color: blue
+
+  +desktop
+    font-size: 6.5rem
+    color: orange
+
+  +large-desktop
+    color: green
+
+  padding: 3rem
+  font-weight: bold
+
+
+.spinner 
+    margin: 2rem auto
+    width: 14rem
+    height: 14rem
+    background: rgb(49, 37, 32)
+    overflow: hidden
+    animation: move 2s infinite linear
+    border-radius: 50%
+    position: relative
+    box-shadow: 0 0 30px $black
+
+.spinner__triangle 
+    width: 0
+    height: 0
+    border-right: 7rem solid transparent
+    border-left: 7rem solid transparent
+    border-top: 7rem solid $purple
+
+.spinner__inner
+    width: 10rem
+    height: 10rem
+    border-radius: 50%
+    position: absolute
+    top: 2rem
+    left: 2rem
+    background-color: #fff
+    box-shadow: 0 0 30px $black inset
+
+
+@keyframes move
+  to
+    transform: rotate(360deg)
+
+.competition-description
+  .big-button
+    background-color: $yellow
+    border-color: transparent
+    color: rgba(0,0,0,.7)
+    border-radius: 290486px
+    padding-left: 1em
+    padding-right: 1em
+    cursor: pointer
+    justify-content: center
+    white-space: nowrap
+
+.custom-footer
+  display: flex
+  justify-content: space-around
+
+.sign
+  padding: 3rem
+  height: 40rem
+  width: 100%
+
+.sign__title
+  display: block
+  text-align: center
+  font-size: 1.5rem
+  color: #ffffff
+
+.sign__container
+  margin: 0 auto
+  padding: 2rem
+  border-radius: 10px
+  width: 35rem
+  height: 35rem
+  display: none
+  position: relative
+  background-color: #ffc88c
+
+.field
+  padding: .5rem 0
+  width: 100%
+  display: flex
+  justify-content: space-between
+
+.form__item:last-of-type
+  margin-bottom: 3rem
+
+.field__name
+  display: block
+  padding: 0.5rem 0
+
+.field__input
+  margin-left: 3rem
+  font-size: 1.5rem
+  border: none
+  border-bottom: 2px solid cornflowerblue
+  height: 2rem
+  display: block
+  background-color: #ffc88c
+  outline: none
+
+.form__button
+  padding: 1rem 2rem 1rem
+  border: 1px solid dodgerblue
+  border-radius: 1.5rem
+  margin: 1rem auto
+  display: block
+  background-color: #c9c7ff
+  cursor: pointer
+  outline: none
+
+.toggler
+  margin: 0 auto
+  padding: 1rem
+  position: absolute
+  bottom: 3rem
+  display: block
+  font-size: 1.5rem
+  text-align: center
+
+.active
+  display: block
+
+.circle
+  border: 3px solid #FFDD57
+  margin: 0 auto
+  padding: 2rem
+  width: 5rem
+  height: 5rem
+  background-color: white
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+
+.sport-icon
+  padding-left: 1.4rem
+
+.kinds
+  padding: 5rem 0
+
+.kind
+  text-align: left
+  padding: 1rem 0
+
+.kind-title
+  padding: 1.5rem 0
+  font-size: 1.5rem
+  font-weight: 600
+
+.kind-description
+  text-align: left
+
+.bikes-type
+  position: relative
+
+.left-arrow
+  position: absolute
+  left: 5
+  top: 50%
+  transform: translateY(-50%)
+
+.right-arrow
+  position: absolute
+  right: 5%
+  top: 50%
+  transform: translateY(-50%)
+
+.bike-title
+  font-size: 2rem
+  font-weight: 600
+  padding: 2rem 0
+
+.competition-title
+  font-size: 2rem
+  font-weight: 600
+  padding-bottom: 1rem
+
+.custom-footer
+  padding: 2rem
+  width: 100vw
+  flex: 0 0 auto
+  color: #b7b7b7
+  background-color: #4a4a4a
+
+.social-item
+  padding: .8rem
+
+.custom-cycle-body
+  padding: 5rem 1rem
+  background-image: linear-gradient(#a5a2a2, #e4e0e0)
+
+.cycle-heading
+  font-size: 3rem
+  padding: 4rem
+
+.cycle-text
+  padding: 4rem
+
+.competition-description
+  p
+    font-size: 1rem
+    padding: 1.1rem 0
+  .big-button
+    background-color: #ffdd57
+    border-color: transparent
+    color: rgba(0, 0, 0, 0.7)
+    border-radius: 290486px
+    padding-left: 1em
+    padding-right: 1em
+    cursor: pointer
+    justify-content: center
+    white-space: nowrap
+
+.custom-footer
+  display: flex
+  justify-content: space-around
