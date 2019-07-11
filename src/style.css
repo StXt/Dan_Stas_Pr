@@ -72,21 +72,26 @@
 /******************************************************************************************/
 
 .sign {
+  padding: 3rem;
+  height: 40rem;
   width: 100%;
 }
 
 .sign__title {
+  display: block;
   text-align: center;
   font-size: 1.5rem;
   color: #ffffff;
 }
 
 .sign__container {
-  display: none;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 10px;
-  width: 40%;
+  width: 35rem;
+  height: 35rem;
+  display: none;
+  position: relative;
   background-color: #ffc88c;
 }
 
@@ -128,13 +133,14 @@
   outline:none;
 }
 
-.sign__container {
-  display: none;
+.toggler {
   margin: 0 auto;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 40%;
-  background-color: #ffc88c;
+  padding: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .active {

@@ -172,50 +172,50 @@
                 </a>
             </div>
         </section>
-        <section class="sign section">
+        <section class="sign">
             <div class="sign__container sign-up active">
-                <div class="sign__title">
+                <span class="sign__title">
                     Sign up
-                </div>
-                <form action="" method="post" class="sign__form form">
+                </span>
+                <form action="" method="GET" class="sign__form form">
                     <div class="form__item field">
                         <label for="sign__name" class="field__name">Name</label>
-                        <input type="text" id="sign__name" required class="field__input">
+                        <input type="text" id="sign__name"  class="field__input field__input--name">
                     </div>
                     <div class="form__item field">
-                        <label for="sign__email" class="field__name">Email</label>
-                        <input type="email" id="sign__email" required class="field__input">
+                        <label for="sign__email" class="field__email">Email</label>
+                        <input type="email" id="sign__email"  class="field__input field__input--email">
                     </div>
                     <div class="form__item field">
                         <label for="sign__password" class="field__name">Password</label>
-                        <input type="password" id="sign__password" required class="field__input">
+                        <input type="password" id="sign__password"  class="field__input field__input--pswd">
                     </div>
                     <div class="form__item field">
                         <label for="sign__reenter" class="field__name">Re-enter password</label>
-                        <input type="password" id="sign__reenter" required class="field__input">
+                        <input type="password" id="sign__reenter"  class="field__input field__input--repeated-pswd">
                     </div>
                     <input type="submit" value="Sign up" class="form__button">
                     <span class="toggler">
-                        If you already have an account, you can <a href="#" class="toggler__button">Sign in</a>
+                        Already registered? <a href="#" class="toggler__button">Sign in</a> right now!
                     </span>
                 </form>
             </div>
             <div class="sign__container sign-in">
-                <div class="sign__title">
+                <span class="sign__title">
                     Sign in
-                </div>
+                </span>
                 <form action="" method="post" class="sign__form form">
                     <div class="form__item field">
                         <label for="sign__email" class="field__name">Email</label>
-                        <input type="email" id="sign__email" required class="field__input">
+                        <input type="email" id="sign__email" required class="field__input field__input--email">
                     </div>
                     <div class="form__item field">
                         <label for="sign__password" class="field__name">Password</label>
-                        <input type="password" id="sign__password" required class="field__input">
+                        <input type="password" id="sign__password" required class="field__input field__input--pswd">
                     </div>
                     <input type="submit" value="Sign in" class="form__button">
-                    <span class="sign__text">
-                        If you don't have an account, you can <a href="#" class="toggler__button">Sign up</a>
+                    <span class="toggler">
+                        Don't have an account? You can <a href="#" class="toggler__button">Sign up!</a>
                     </span>
                 </form>
             </div>
@@ -233,6 +233,5 @@
             </div>
         </footer>
     </div>
-<!--    <script src="main.js"></script>-->
 </body>
 </html>
