@@ -1,32 +1,37 @@
-@charset "utf-8"
-@import "~bulma/bulma"
+@charset 'utf-8'
+@import '~bulma/bulma'
 @import 'sass/variables'
 @import 'sass/mixins'
 
-.header__title
-  +mobile
-    padding: .5rem
-    font-size: 1.5rem
-    color: red
+.circle
+  border: 3px solid #FFDD57
+  margin: 0 auto
+  padding: 2rem
+  width: 5rem
+  height: 5rem
+  background-color: white
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
 
-  +tablet-portrait
-    font-size: 5rem
-    color: white
+.sport-icon
+  padding-left: 1.4rem
 
-  +tablet-landscape
-    color: blue
+.kinds
+  padding: 5rem 0
 
-  +desktop
-    font-size: 6.5rem
-    color: orange
+.kind
+  text-align: left
+  padding: 1rem 0
 
-  +large-desktop
-    color: green
+.kind-title
+  padding: 1.5rem 0
+  font-size: 1.5rem
+  font-weight: 600
 
-  padding: 3rem
-  font-weight: bold
-
-
+.kind-description
+  text-align: left
 
 
 .competition-description
@@ -125,37 +130,6 @@
   top: 0
   height: 100vh
   opacity: .7
-
-
-.circle
-  border: 3px solid #FFDD57
-  margin: 0 auto
-  padding: 2rem
-  width: 5rem
-  height: 5rem
-  background-color: white
-  display: flex
-  align-items: center
-  justify-content: center
-  border-radius: 50%
-
-.sport-icon
-  padding-left: 1.4rem
-
-.kinds
-  padding: 5rem 0
-
-.kind
-  text-align: left
-  padding: 1rem 0
-
-.kind-title
-  padding: 1.5rem 0
-  font-size: 1.5rem
-  font-weight: 600
-
-.kind-description
-  text-align: left
 
 .bikes-type
   position: relative

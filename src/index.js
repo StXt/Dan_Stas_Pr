@@ -1,8 +1,9 @@
 import './components/layouts/header/header'
 import './components/layouts/spinner/spinner'
+import './components/layouts/section1/section1'
 import "./index.pug"
 import  "./index.sass"
-import "../assets/img/logo.png"
+import "../assets/img/bikezilla.png"
 import "../assets/img/cycling.png"
 import "../assets/img/background.jpg"
 import "../assets/img/bikes/first.png"
