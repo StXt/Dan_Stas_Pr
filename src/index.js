@@ -1,11 +1,17 @@
-import './components/layouts/header/header'
+import './components/layouts/popup'
+import './components/layouts/popup/popup'
+import './components/layouts/header'
 import './components/layouts/spinner/spinner'
 import './components/layouts/section1/section1'
 import "./index.pug"
 import  "./index.sass"
 import "../assets/img"
+import PopUp from "./components/layouts/popup/popup";
 
-const popUp = document.querySelector('.sign-up-modal');
+let popUp = new PopUp(".sign-up-modal");
+popUp.init();
+
+/*const popUp = document.querySelector('.sign-up-modal');
 popUp.addEventListener('click', openModal);
 
 function openModal(event) {
@@ -13,7 +19,7 @@ function openModal(event) {
     const signBlock = document.querySelector('.sign');
     const wrapperBlock = document.querySelector('.wrapper');
     signBlock.classList.toggle('active');
-}
+}*/
 
 /*window.addEventListener('click', closeModal);
 
@@ -25,6 +31,7 @@ function closeModal(event) {
     }
 }*/
 
+/*
 const signUpBtn = document.querySelector('.sign-up .toggler__button'),
       signInBtn = document.querySelector('.sign-in .toggler__button');
 signUpBtn.addEventListener('click', toggleForm);
@@ -36,4 +43,4 @@ function toggleForm(event) {
           signIn = document.querySelector('.sign-in');
     signUp.classList.toggle('active');
     signIn.classList.toggle('active');
-}
+}*/
