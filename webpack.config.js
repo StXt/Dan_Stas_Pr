@@ -38,7 +38,7 @@ var config = {
                     options: {
                         limit: 8000, // Convert assets < 8kb to base64 strings
                         name: '[path][name].[ext]',
-                    }
+                    },
                 }]
             },
             {
@@ -57,29 +57,11 @@ var config = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        // new ExtractTextPlugin({
-        //     filename: './css/style.bundle.css',
-        //     allChunks: true,
-        // }),
         new HtmlWebpackPlugin({
             template: 'src/index.pug',
             filename: 'index.html'
         }),
-        new CopyWebpackPlugin([
-            // {
-            //     from: './src/fonts',
-            //     to: './fonts'
-            // },
-            // {
-            //     from: './src/js/vendor',
-            //     to: './js/vendor'
-            // },
-            // {
-            //     from: './src/img',
-            //     to: './img'
-            // },
-        ]),
-        //new HtmlWebpackPugPlugin()
+        // new HtmlWebpackPugPlugin()
     ]
 };
 module.exports = (env, argv) => {

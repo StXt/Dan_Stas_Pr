@@ -1,4 +1,5 @@
 import './components/layouts/header/header'
+import './components/layouts/spinner/spinner'
 import "./index.pug"
 import  "./index.sass"
 import "../assets/img/logo.png"
