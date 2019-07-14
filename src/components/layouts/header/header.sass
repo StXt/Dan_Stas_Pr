@@ -1,8 +1,15 @@
-.header
+@import './../../../sass/mixins'
+
+#header
+  height: 100vh
   background-image: url("../../../../assets/img/background.jpg")
   background-size: cover
   background-position: center center
   background-repeat: no-repeat
+
+
+#header-container
+  padding-top: 8rem
 
 .image
   max-width: 100%
@@ -11,13 +18,35 @@
   width: 400px
 
 .link
-  color: #ffffff
+
+  color: #ffffff !important
 
 .home-title
   font-size: 4rem
 
-.big-button
-  margin-top: 1rem
-  font-size: 1.2rem
-  padding: 1rem
+.header-btn
+  margin-top: 3rem
+  font-size: 3rem 
+  padding: 2rem
   text-transform: uppercase
+
+.header__title
+  +mobile
+    padding: .5rem
+    font-size: 1.5rem
+    
+
+  +tablet-portrait
+    font-size: 5rem
+
+  +tablet-landscape
+
+  +desktop
+    font-size: 6.5rem
+    
+
+  +large-desktop
+
+  padding: 3rem
+  font-weight: bold
+  color: #66accd !important

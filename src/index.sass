@@ -1,64 +1,38 @@
-@charset "utf-8"
-@import "~bulma/bulma"
+@charset 'utf-8'
+@import '~bulma/bulma'
 @import 'sass/variables'
 @import 'sass/mixins'
 
-.header__title
-  +mobile
-    padding: .5rem
-    font-size: 1.5rem
-    color: red
+.circle
+  border: 3px solid #FFDD57
+  margin: 0 auto
+  padding: 2rem
+  width: 5rem
+  height: 5rem
+  background-color: white
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
 
-  +tablet-portrait
-    font-size: 5rem
-    color: white
+.sport-icon
+  padding-left: 1.4rem
 
-  +tablet-landscape
-    color: blue
+.kinds
+  padding: 5rem 0
 
-  +desktop
-    font-size: 6.5rem
-    color: orange
+.kind
+  text-align: left
+  padding: 1rem 0
 
-  +large-desktop
-    color: green
+.kind-title
+  padding: 1.5rem 0
+  font-size: 1.5rem
+  font-weight: 600
 
-  padding: 3rem
-  font-weight: bold
+.kind-description
+  text-align: left
 
-
-.spinner 
-    margin: 2rem auto
-    width: 14rem
-    height: 14rem
-    background: rgb(49, 37, 32)
-    overflow: hidden
-    animation: move 2s infinite linear
-    border-radius: 50%
-    position: relative
-    box-shadow: 0 0 30px $black
-
-.spinner__triangle 
-    width: 0
-    height: 0
-    border-right: 7rem solid transparent
-    border-left: 7rem solid transparent
-    border-top: 7rem solid $purple
-
-.spinner__inner
-    width: 10rem
-    height: 10rem
-    border-radius: 50%
-    position: absolute
-    top: 2rem
-    left: 2rem
-    background-color: #fff
-    box-shadow: 0 0 30px $black inset
-
-
-@keyframes move
-  to
-    transform: rotate(360deg)
 
 .competition-description
   .big-button
@@ -157,37 +131,6 @@
   height: 100vh
   opacity: .7
 
-
-.circle
-  border: 3px solid #FFDD57
-  margin: 0 auto
-  padding: 2rem
-  width: 5rem
-  height: 5rem
-  background-color: white
-  display: flex
-  align-items: center
-  justify-content: center
-  border-radius: 50%
-
-.sport-icon
-  padding-left: 1.4rem
-
-.kinds
-  padding: 5rem 0
-
-.kind
-  text-align: left
-  padding: 1rem 0
-
-.kind-title
-  padding: 1.5rem 0
-  font-size: 1.5rem
-  font-weight: 600
-
-.kind-description
-  text-align: left
-
 .bikes-type
   position: relative
 
@@ -227,13 +170,6 @@
   padding: 5rem 1rem
   background-image: linear-gradient(#a5a2a2, #e4e0e0)
 
-.cycle-heading
-  font-size: 3rem
-  padding: 4rem
-
-.cycle-text
-  padding: 4rem
-
 .competition-description
   p
     font-size: 1rem
@@ -253,14 +189,7 @@
   display: flex
   justify-content: space-around
 
-.cycle-service
-  padding: 5rem 1rem
-  display: flex
-  background-image: linear-gradient(#a5a2a2, #e4e0e0)
 
-.cycle-col
-  margin: 0 2rem
-  width: 45%
 
 .cycle-col__image
   margin-top: 3rem

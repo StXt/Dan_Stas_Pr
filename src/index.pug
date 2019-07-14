@@ -4,58 +4,14 @@ html(lang='en')
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         meta(http-equiv='X-UA-Compatible', content='ie=edge')
-        title ShutePal
+        title Bikezilla
     body
         .wrapper
+            include ./components/layouts/popup/popup
             include ./components/layouts/header/header
-            section.section
-                .spinner
-                    .spinner__triangle
-                    .spinner__inner
-            section.section.has-text-centered
-                .container
-                    h2.title The most popular sports in USA
-                    .columns.kinds
-                        .column.is-3.is-offset-1.kind
-                            .sport-icon
-                                span.icon.has-text-warning
-                                    i.fas.fa-bicycle.fa-3x.circle
-                            p.kind-title Cycling
-                            p.kind-description
-                                | Cycling, also called biking or bicycling, is the use of bicycles for transport,
-                                | recreation, exercise or sport.
-                                | People engaged in cycling are referred to as "cyclists", "bikers", or less commonly, as "bicyclists".
-                        .column.is-3.is-offset-1.kind
-                            .sport-icon
-                                span.icon.has-text-warning.test
-                                    i.fas.fa-futbol.fa-3x.circle
-                            p.kind-title Football
-                            p.kind-description
-                                | Football is a family of team sports that involve, to varying degrees,
-                                | kicking a ball to score a goal. Unqualified, the word football
-                                | normally means the form of football that is the most popular
-                                | where the word is used.
-                        .column.is-3.is-offset-1.kind
-                            .sport-icon
-                                span.icon.has-text-warning
-                                    i.fas.fa-quidditch.fa-3x.circle
-                            p.kind-title Quidditch
-                            p.kind-description
-                                | Quidditch is a sport of two teams of seven players each mounted on broomsticks
-                                | played on a hockey rink-sized pitch. It is based on a fictional game of the
-                                | same name invented by author J. K. Rowling.
-            section.cycle-service.hero.is-fullheight
-                .hero-body.custom-cycle-body
-                    .container
-                        .columns
-                            article.column
-                                h2.title.has-text-warning.cycle-heading Our awesome and quality service for you
-                                p.content.is-large.cycle-text
-                                    | We are happy to invite you to multiple grounds where our consultants will help you
-                                    | to find a propriate bicycle for you and your mates. Every tour will be memorable
-                                    | for you and mates. Make your way to the happy moments without thinking about hard path to them!
-                            .column.cyclist
-                                img.bicylce(src='./assets/img/cycling.png', alt='Cyclist')
+            include ./components/layouts/spinner/spinner
+            include ./components/layouts/section1/section1
+            include ./components/layouts/section2/section2
             section.section.has-text-centered.bikes-type
                 .container
                     h2.title Type of bicycles
