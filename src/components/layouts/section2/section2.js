@@ -1,0 +1,1 @@
+import './section2.sass';
