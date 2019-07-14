@@ -1,6 +1,7 @@
 import './components/layouts/header/header'
 import './components/layouts/spinner/spinner'
 import './components/layouts/section1/section1'
+import './components/layouts/section2/section2'
 import "./index.pug"
 import  "./index.sass"
 import "../assets/img"

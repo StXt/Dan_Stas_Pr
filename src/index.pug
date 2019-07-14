@@ -10,18 +10,7 @@ html(lang='en')
             include ./components/layouts/header/header
             include ./components/layouts/spinner/spinner
             include ./components/layouts/section1/section1
-            section.cycle-service.hero.is-fullheight
-                .hero-body.custom-cycle-body
-                    .container
-                        .columns
-                            article.column
-                                h2.title.has-text-warning.cycle-heading Our awesome and quality service for you
-                                p.content.is-large.cycle-text
-                                    | We are happy to invite you to multiple grounds where our consultants will help you
-                                    | to find a propriate bicycle for you and your mates. Every tour will be memorable
-                                    | for you and mates. Make your way to the happy moments without thinking about hard path to them!
-                            .column.cyclist
-                                img.bicylce(src='./assets/img/cycling.png', alt='Cyclist')
+            include ./components/layouts/section2/section2
             section.section.has-text-centered.bikes-type
                 .container
                     h2.title Type of bicycles
