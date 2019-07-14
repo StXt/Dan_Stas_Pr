@@ -7,7 +7,7 @@ html(lang='en')
         title Bikezilla
     body
         .wrapper
-            include ./components/layouts/popup/popup
+            include ./components/layouts/signUp/signUp
             include ./components/layouts/header/header
             include ./components/layouts/spinner/spinner
             include ./components/layouts/section1/section1
@@ -52,28 +52,6 @@ html(lang='en')
                     a.btn(href='#')
                         button.btn__item Read more
             section.sign
-                .black Test text
-                .sign__container.sign-up.active
-                    span.sign__title
-                        | Sign up
-                    form.sign__form.form(action='', method='GET')
-                        .form__item.field
-                            label.field__name(for='sign__name') Name
-                            input#sign__name.field__input.field__input--name(type='text')
-                        .form__item.field
-                            label.field__email(for='sign-in__email') Email
-                            input#sign-in__email.field__input.field__input--email(type='email')
-                        .form__item.field
-                            label.field__name(for='sign-in__password') Password
-                            input#sign-in__password.field__input.field__input--pswd(type='password')
-                        .form__item.field
-                            label.field__name(for='sign__reenter') Re-enter password
-                            input#sign__reenter.field__input.field__input--repeated-pswd(type='password')
-                        input.form__button(type='submit', value='Sign up')
-                        span.toggler
-                            | Already registered?
-                            a.toggler__button(href='#') Sign in
-                            |  right now!
                 .sign__container.sign-in
                     span.sign__title
                         | Sign in

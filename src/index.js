@@ -1,5 +1,4 @@
-import './components/layouts/popup'
-import './components/layouts/popup/popup'
+import './components/layouts/signUp'
 import './components/layouts/header'
 import './components/layouts/spinner/spinner'
 import './components/layouts/section1/section1'
@@ -7,10 +6,10 @@ import './components/layouts/section2/section2'
 import "./index.pug"
 import  "./index.sass"
 import "../assets/img"
-import PopUp from "./components/layouts/popup/popup";
+import SignUp from "./components/layouts/signUp/signUp";
 
-let popUp = new PopUp(".sign-up-modal");
-popUp.init();
+let signUp = new SignUp(".sign-up-modal");
+signUp.init();
 
 /*const popUp = document.querySelector('.sign-up-modal');
 popUp.addEventListener('click', openModal);
