@@ -1,4 +1,5 @@
 import './components/layouts/signUp'
+import './components/layouts/signIn/signIn'
 import './components/layouts/header'
 import './components/layouts/spinner/spinner'
 import './components/layouts/section1/section1'
