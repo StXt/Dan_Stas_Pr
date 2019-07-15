@@ -44,3 +44,30 @@ function toggleForm(event) {
     signUp.classList.toggle('active');
     signIn.classList.toggle('active');
 }*/
+import * as firebase from 'firebase/app'
+
+import 'firebase/auth'
+
+var firebaseConfig = {
+    apiKey: "AIzaSyD2Z_-c88rQn4FYrnVv7_eR5wOZbhWpuQ8",
+    authDomain: "shutepal.firebaseapp.com",
+    databaseURL: "https://shutepal.firebaseio.com",
+    projectId: "shutepal",
+    storageBucket: "",
+    messagingSenderId: "209338032365",
+    appId: "1:209338032365:web:f62e43ebfceecdac"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+(function () {
+    firebase.auth().createUserWithEmailAndPassword("dan.network.17@gmail.com", "test123")
+        .then(response => {
+            console.log('Nice!');
+        })
+        .catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+        });
+})();
