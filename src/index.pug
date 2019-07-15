@@ -8,6 +8,7 @@ html(lang='en')
     body
         .wrapper
             include ./components/layouts/signUp/signUp
+            include ./components/layouts/signIn/signIn
             include ./components/layouts/header/header
             include ./components/layouts/spinner/spinner
             include ./components/layouts/section1/section1
@@ -51,21 +52,6 @@ html(lang='en')
                         | finishing times is the leader of the race and wears the yellow jersey.
                     a.btn(href='#')
                         button.btn__item Read more
-            section.sign
-                .sign__container.sign-in
-                    span.sign__title
-                        | Sign in
-                    form.sign__form.form(action='', method='post')
-                        .form__item.field
-                            label.field__name(for='sign-up__email') Email
-                            input#sign-up__email.field__input.field__input--email(type='email', required='')
-                        .form__item.field
-                            label.field__name(for='sign-up__password') Password
-                            input#sign-up__password.field__input.field__input--pswd(type='password', required='')
-                        input.form__button(type='submit', value='Sign in')
-                        span.toggler
-                            | Don't have an account? You can
-                            a.toggler__button(href='#') Sign up!
             footer.custom-footer
                 .footer-text
                     | 2019, Parashute jumping. All Rights Reserved

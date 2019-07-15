@@ -5,14 +5,15 @@ class SignUp extends PopUp {
         super(btn);
         this.user = [];
         this.signUpBtn = document.querySelector(".form__button");
+        this.switchSignUpBtn = document.querySelector('.toggler__button-sign-up');
+        this.switchSignInBtn = document.querySelector('.toggler__button-sign-in');
     }
 
     init() {
-        const self = this;
         super.init();
-        this.signUpBtn.addEventListener('click', function () {
-            self.addUser();
-        });
+        this.signUpBtn.addEventListener('click', (e) => this.addUser(e));
+        this.switchSignUpBtn.addEventListener('click', (e) => this.toggleForm(e));
+        this.switchSignInBtn.addEventListener('click', (e) => this.toggleForm(e));
     }
 
     addUser() {
@@ -32,6 +33,15 @@ class SignUp extends PopUp {
         this.password.value = '';
         this.repeatedPassword.value = '';
         console.log(this.user);
+    }
+
+    toggleForm(event) {
+        event.preventDefault();
+        this.signUp = document.querySelector('.sign-up');
+        this.signIn = document.querySelector('.sign-in');
+        console.log(this.signUp);
+        this.signUp.classList.toggle('active');
+        this.signIn.classList.toggle('active');
     }
 
 

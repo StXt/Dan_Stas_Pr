@@ -1,0 +1,16 @@
+extends ../popup/popup
+block content
+    .sign-in
+        span.sign__title
+            | Sign in
+        form.sign__form.form(action='', method='post')
+            .form__item.field
+                label.field__name(for='sign-up__email') Email
+                input#sign-up__email.field__input.field__input--email(type='email', required='')
+            .form__item.field
+                label.field__name(for='sign-up__password') Password
+                input#sign-up__password.field__input.field__input--pswd(type='password', required='')
+            input.form__button(type='submit', value='Sign in')
+            span.toggler
+                | Don't have an account? You can
+                a.toggler__button-sign-up(href='#') Sign up!
