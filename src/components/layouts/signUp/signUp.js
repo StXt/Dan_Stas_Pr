@@ -37,11 +37,21 @@ class SignUp extends PopUp {
 
     toggleForm(event) {
         event.preventDefault();
-        this.signUp = document.querySelector('.sign-up');
-        this.signIn = document.querySelector('.sign-in');
-        console.log(this.signUp);
-        this.signUp.classList.toggle('active');
-        this.signIn.classList.toggle('active');
+
+        this.signList = document.querySelectorAll('.popup');
+
+        this.sign = Array.prototype.slice.call(this.signList);
+
+        this.sign.forEach((element)=>{
+            element.classList.toggle('active')
+
+        })
+
+        // this.signUp = document.querySelector('.sign-up');
+        // this.signIn = document.querySelector('.sign-in');
+        // console.dir(this.switchSignUpBtn);
+        // this.signUp.classList.toggle('active');
+        // this.signIn.classList.toggle('active');
     }
 
 
