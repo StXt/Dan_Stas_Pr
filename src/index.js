@@ -1,3 +1,4 @@
+import $ from "jquery";
 import './components/layouts/signUp'
 import './components/layouts/signIn/signIn'
 import './components/layouts/header'
@@ -10,6 +11,8 @@ import "../assets/img"
 import SignUp from "./components/layouts/signUp/signUp";
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+
+$(function () {
 
 let signUp = new SignUp(".sign-up-modal");
 signUp.init();
@@ -37,3 +40,5 @@ firebase.initializeApp(firebaseConfig);
             // ...
         });
 })();
+
+});

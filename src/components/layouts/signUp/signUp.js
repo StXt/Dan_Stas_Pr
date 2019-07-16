@@ -44,7 +44,6 @@ class SignUp extends PopUp {
         })
     }
 
-
 }
 
 export default SignUp;
