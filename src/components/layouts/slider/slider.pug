@@ -1,0 +1,21 @@
+section.slideshow-container
+    .mySlides.fade
+        .numbertext 1 / 3
+        img(src="./assets/img/slides/x1.jpg", style='width:100%')
+        .text Caption Text
+    .mySlides.fade
+        .numbertext 2 / 3
+        img(src="./assets/img/slides/x2.jpg", style='width:100%')
+        .text Caption Two
+    .mySlides.fade
+        .numbertext 3 / 3
+        img(src="./assets/img/slides/x3.jpg", style='width:100%')
+        .text Caption Three
+    a.prev(onclick='plusSlides(-1)') &#x276E;
+    a.next(onclick='plusSlides(1)') &#x276F;
+    br
+    div(style='text-align:center')
+        span.dot(onclick='currentSlide(1)')
+        span.dot(onclick='currentSlide(2)')
+        span.dot(onclick='currentSlide(3)')
+script(src='./slider.js')
