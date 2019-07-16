@@ -7,6 +7,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require("webpack");
+const autoprefixer = require('autoprefixer');
 
 
 
@@ -43,7 +45,7 @@ var config = {
             },
             {
                 test: /\.(css|sass)$/,
-                use: ['style-loader', 'css-loader?url=false', 'sass-loader']
+                use: ['style-loader', 'css-loader?url=false', 'postcss-loader', 'sass-loader']
             },
             // {
             //     test: /\.css$/,
@@ -61,6 +63,13 @@ var config = {
             template: 'src/index.pug',
             filename: 'index.html'
         }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    autoprefixer()
+                ]
+            }
+        })
         // new HtmlWebpackPugPlugin()
     ]
 };

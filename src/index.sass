@@ -3,17 +3,16 @@
 @import 'sass/variables'
 @import 'sass/mixins'
 
-/* Section animation Jquery */
-/* section
+section
   font-family: sans-serif
   font-size: 18px
   line-height: 1.6rem
   margin: auto
   padding: 1.6rem
   transform: rotate(360deg) translateY(3.2rem)
-  opacity: .2 
+  opacity: .2
 
-  //keyframes boom
+@keyframes boom
   0%
     transform: rotate(360deg) translateY(3.2rem)
     opacity: .2
@@ -21,12 +20,14 @@
     transform: none
     opacity: 1
 
-/*.visible
+.visible
   animation-name: boom
   animation-duration: 300ms
-  animation-fill-mode: both */
+  animation-fill-mode: both
 
-/* Other styles */
+
+.autoprefixer-test
+  user-select: none
 
 .circle
   border: 3px solid #FFDD57
@@ -132,6 +133,9 @@
 
 .social-item
   padding: .8rem
+
+.footer-text
+  color: #ffffff
 
 .custom-cycle-body
   padding: 5rem 1rem

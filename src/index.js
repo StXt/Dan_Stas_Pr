@@ -14,7 +14,7 @@ import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
 
-/* function onEntry(entry) {
+ function onEntry(entry) {
     entry.forEach((change) => {
         if(change.isIntersecting) {
             change.target.classList.add('visible');
@@ -28,7 +28,7 @@ let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('section');
 for (let elm of elements) {
     observer.observe(elm);
-} */
+}
 
 $(function () {
 
