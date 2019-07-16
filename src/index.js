@@ -5,6 +5,7 @@ import './components/layouts/header'
 import './components/layouts/spinner/spinner'
 import './components/layouts/section1/section1'
 import './components/layouts/section2/section2'
+import './components/layouts/section3/section3'
 import "./index.pug"
 import  "./index.sass"
 import "../assets/img"
@@ -13,7 +14,7 @@ import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
 
-function onEntry(entry) {
+/* function onEntry(entry) {
     entry.forEach((change) => {
         if(change.isIntersecting) {
             change.target.classList.add('visible');
@@ -27,7 +28,7 @@ let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('section');
 for (let elm of elements) {
     observer.observe(elm);
-}
+} */
 
 $(function () {
 
