@@ -12,10 +12,27 @@ import SignUp from "./components/layouts/signUp/signUp";
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
+
+function onEntry(entry) {
+    entry.forEach((change) => {
+        if(change.isIntersecting) {
+            change.target.classList.add('visible');
+        }
+    });
+}
+let options = {
+    threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('section');
+for (let elm of elements) {
+    observer.observe(elm);
+}
+
 $(function () {
 
-let signUp = new SignUp(".sign-up-modal");
-signUp.init();
+/*let signUp = new SignUp(".sign-up-modal");
+signUp.init();*/
 
 var firebaseConfig = {
     apiKey: "AIzaSyD2Z_-c88rQn4FYrnVv7_eR5wOZbhWpuQ8",

@@ -20,11 +20,17 @@ html(lang='en')
                         .column
                             .bike-title
                                 | Road bike
-                            img.image(src='./assets/img/bikes/first.png', alt='road bike')
+                            picture.image
+                                source(media="(max-width: 799px)" srcset="./assets/img/bikes/second.png")
+                                source(media="(min-width: 800px)" srcset="./assets/img/bikes/first.png")
+                                img(src="./assets/img/bikes/first.png" alt="Road bike")
                         .column
                             .bike-title
                                 | BMX/Trick Bike
-                            img.image(src='./assets/img/bikes/second.png', alt='trick bike')
+                            picture.image
+                                source(media="(max-width: 799px)" srcset="./assets/img/bikes/first.png")
+                                source(media="(min-width: 800px)" srcset="./assets/img/bikes/second.png")
+                                img(src="./assets/img/bikes/second.png" alt="Road bike")
                 .arrows.is-hidden-mobile
                     .left-arrow
                         i.fas.fa-chevron-left.fa-3x
@@ -32,7 +38,10 @@ html(lang='en')
                         i.fas.fa-chevron-right.fa-3x
             section.cycle-service
                 .cycle-col
-                    img.cycle-col__image(src='./assets/img/competition/logo.png', alt='Tour de france')
+                    picture.image
+                        source(media="(max-width: 799px)" srcset="./assets/img/bikes/first.png")
+                        source(media="(min-width: 800px)" srcset="./assets/img/competition/logo.png")
+                        img(src="./assets/img/competition/logo.png" alt="Tour de france")
                 .cycle-col
                     h3.cycle-col__title Tour de france
                     p.cycle-col__text
@@ -56,7 +65,19 @@ html(lang='en')
                 .footer-text
                     | 2019, Parashute jumping. All Rights Reserved
                 .footer-icons
-                    img.social-item(src='./assets/img/social/twitter.png', alt='Twitter')
-                    img.social-item(src='./assets/img/social/facebook.png', alt='Twitter')
-                    img.social-item(src='./assets/img/social/google-plus-logo.png', alt='Twitter')
-                    img.social-item(src='./assets/img/social/instagram.png', alt='Twitter')
+                    picture.social-item
+                        source(media="(max-width: 799px)" srcset="./assets/img/social/facebook.png")
+                        source(media="(min-width: 800px)" srcset="./assets/img/social/twitter.png")
+                        img(src="./assets/img/social/twitter.png" alt="Twitter")
+                    picture.social-item
+                        source(media="(max-width: 799px)" srcset="./assets/img/social/twitter.png")
+                        source(media="(min-width: 800px)" srcset="./assets/img/social/facebook.png")
+                        img(src="./assets/img/social/facebook.png" alt="Facebook")
+                    picture.social-item
+                        source(media="(max-width: 799px)" srcset="./assets/img/social/facebook.png")
+                        source(media="(min-width: 800px)" srcset="./assets/img/social/google-plus-logo.png")
+                        img(src="./assets/img/social/google-plus-logo.png" alt="GooglePlus")
+                    picture.social-item
+                        source(media="(max-width: 799px)" srcset="./assets/img/social/facebook.png")
+                        source(media="(min-width: 800px)" srcset="./assets/img/social/instagram.png")
+                        img(src="./assets/img/social/instagram.png" alt="Instagram")

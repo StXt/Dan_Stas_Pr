@@ -3,6 +3,29 @@
 @import 'sass/variables'
 @import 'sass/mixins'
 
+section
+  font-family: sans-serif
+  font-size: 18px
+  line-height: 1.6rem
+  margin: auto
+  padding: 1.6rem
+  transform: rotate(360deg) translateY(3.2rem)
+  opacity: .2
+
+@keyframes boom
+  0%
+    transform: rotate(360deg) translateY(3.2rem)
+    opacity: .2
+  100%
+    transform: none
+    opacity: 1
+
+.visible
+  animation-name: boom
+  animation-duration: 300ms
+  animation-fill-mode: both
+
+
 .circle
   border: 3px solid #FFDD57
   margin: 0 auto
