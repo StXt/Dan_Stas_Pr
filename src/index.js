@@ -10,12 +10,13 @@ import "./index.pug"
 import  "./index.sass"
 import "../assets/img"
 import SignUp from "./components/layouts/signUp/signUp";
+import PopUp from "./components/layouts/popup/popup";
 import SignIn from "./components/layouts/signIn/signIn";
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
 
- function onEntry(entry) {
+/* function onEntry(entry) {
     entry.forEach((change) => {
         if(change.isIntersecting) {
             change.target.classList.add('visible');
@@ -29,13 +30,21 @@ let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('section');
 for (let elm of elements) {
     observer.observe(elm);
-}
+}*/
 
 let signUp = new SignUp(".sign-up-modal");
 signUp.init();
 
 let signIn = new SignIn();
 signIn.init();
+
+const observer = new Test();
+
+observer.subscribe(data=>{
+    console.log('subscribe was fired', data);
+});
+
+observer.broadcast({someData:'hello'});
 
 var firebaseConfig = {
     apiKey: "AIzaSyD2Z_-c88rQn4FYrnVv7_eR5wOZbhWpuQ8",
@@ -53,13 +62,27 @@ firebase.initializeApp(firebaseConfig);
 firebase.auth().onAuthStateChanged(user=>{
     if (user) {
         console.log(user.email);
+        const img = document.createElement("img");
+        img.src = "./assets/img/user/user-default.jpg";
+        img.className = "user__avatar";
+        const src = document.querySelector(".user");
+        src.appendChild(img);
     }
-    const img = document.createElement("img");
-    img.src = "./assets/img/user/user-default.jpg";
-    img.className = "user__avatar";
 
-    var src = document.querySelector(".user");
-    src.appendChild(img);
     /*const img = document.querySelector('user__avatar');
     img.src = "./assets/img/user/user-default.jpg";*/
 });
+
+const logoutBtn = document.querySelector(".logout");
+logoutBtn.addEventListener('click', logout);
+
+function logout() {
+    firebase.auth().signOut()
+        .then(()=>{
+            alert("User sign out");
+            console.log('User sign out');
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+}

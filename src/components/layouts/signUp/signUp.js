@@ -19,6 +19,7 @@ class SignUp extends PopUp {
     }
 
     addUser() {
+        this.form = document.querySelector(".sign__form");
         this.name = document.querySelector('.field__input-name').value;
         this.email = document.querySelector('.field__input-email').value;
         this.password = document.querySelector('.field__input-pswd').value;
@@ -28,22 +29,18 @@ class SignUp extends PopUp {
                 console.log(response);
                 alert("You are successfully complete registration!");
             })
-            .then(response=> {
-                document.querySelector(".sign__form").reset();
-                this.closePopup = document.querySelector('.popup');
-                this.closePopup.classList.toggle('active');
+            .then(()=> {
+                this.toggleForm();
             })
-            .catch(function(error) {
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                alert(error.code);
-                // console.warn(error)
-                // ...
+            .catch((error)=>{
+                const errorCode = error.code,
+                      errorMessage = error.message;
+                alert(errorMessage);
             });
+        this.form.reset();
     }
 
-    toggleForm(event) {
+    toggleForm() {
         this.signList = document.querySelectorAll('.popup');
         this.sign = Array.prototype.slice.call(this.signList);
         this.sign.forEach((element)=>{
