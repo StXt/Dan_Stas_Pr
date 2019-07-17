@@ -10,6 +10,7 @@ import "./index.pug"
 import  "./index.sass"
 import "../assets/img"
 import SignUp from "./components/layouts/signUp/signUp";
+import SignIn from "./components/layouts/signIn/signIn";
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
@@ -30,10 +31,11 @@ for (let elm of elements) {
     observer.observe(elm);
 }
 
-$(function () {
+let signUp = new SignUp(".sign-up-modal");
+signUp.init();
 
-/*let signUp = new SignUp(".sign-up-modal");
-signUp.init();*/
+let signIn = new SignIn();
+signIn.init();
 
 var firebaseConfig = {
     apiKey: "AIzaSyD2Z_-c88rQn4FYrnVv7_eR5wOZbhWpuQ8",
@@ -46,17 +48,18 @@ var firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-(function () {
-    firebase.auth().createUserWithEmailAndPassword("dan.network.17@gmail.com", "test123")
-        .then(response => {
-            console.log('Nice!');
-        })
-        .catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ...
-        });
-})();
 
+
+firebase.auth().onAuthStateChanged(user=>{
+    if (user) {
+        console.log(user.email);
+    }
+    const img = document.createElement("img");
+    img.src = "./assets/img/user/user-default.jpg";
+    img.className = "user__avatar";
+
+    var src = document.querySelector(".user");
+    src.appendChild(img);
+    /*const img = document.querySelector('user__avatar');
+    img.src = "./assets/img/user/user-default.jpg";*/
 });
