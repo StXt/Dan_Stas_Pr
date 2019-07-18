@@ -35,16 +35,16 @@ for (let elm of elements) {
 let signUp = new SignUp(".sign-up-modal");
 signUp.init();
 
-let signIn = new SignIn();
-signIn.init();
+/*let signIn = new SignIn();
+signIn.init();*/
 
-const observer = new Test();
+/*const observer = new Test();
 
 observer.subscribe(data=>{
     console.log('subscribe was fired', data);
 });
 
-observer.broadcast({someData:'hello'});
+observer.broadcast({someData:'hello'});*/
 
 var firebaseConfig = {
     apiKey: "AIzaSyD2Z_-c88rQn4FYrnVv7_eR5wOZbhWpuQ8",
@@ -59,19 +59,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-firebase.auth().onAuthStateChanged(user=>{
-    if (user) {
-        console.log(user.email);
-        const img = document.createElement("img");
-        img.src = "./assets/img/user/user-default.jpg";
-        img.className = "user__avatar";
-        const src = document.querySelector(".user");
-        src.appendChild(img);
-    }
 
-    /*const img = document.querySelector('user__avatar');
-    img.src = "./assets/img/user/user-default.jpg";*/
-});
 
 const logoutBtn = document.querySelector(".logout");
 logoutBtn.addEventListener('click', logout);

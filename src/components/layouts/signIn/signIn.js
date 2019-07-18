@@ -1,11 +1,14 @@
 import PopUp from "../popup/popup";
 import * as firebase from 'firebase/app'
 import SignUp from "../signUp/signUp";
-import Observer from "./observer";
+import {Observable, Observer} from "./observer";
 
-const observer = new Observer();
+const observable = new Observable();
+const toogleFormObserver = new Observer(f1)
 
-observer.subscribe();
+observable.subscribe(toogleFormObserver)
+
+observable.subscribe();
 
 class SignIn extends PopUp {
     constructor() {
@@ -25,7 +28,9 @@ class SignIn extends PopUp {
             .then(response => {
                 // console.log(response);
                 alert("Welcome!");
-                this.toggleForm();
+                // this.toggleForm();
+                observable.notify();
+
             })
             .catch((error)=>{
                 const errorCode = error.code,
@@ -34,6 +39,30 @@ class SignIn extends PopUp {
             });
         this.form.reset();
     }
+}
+
+function f() {
+    firebase.auth().onAuthStateChanged(user=>{
+        if (user) {
+            console.log(user.email);
+            const img = document.createElement("img");
+            img.src = "./assets/img/user/user-default.jpg";
+            img.className = "user__avatar";
+            const src = document.querySelector(".user");
+            src.appendChild(img);
+        }
+
+        /*const img = document.querySelector('user__avatar');
+        img.src = "./assets/img/user/user-default.jpg";*/
+    });
+}
+
+function f1() {
+    const signList = document.querySelectorAll('.popup'),
+    sign = Array.prototype.slice.call(signList);
+    sign.forEach((element)=>{
+        element.classList.toggle('active')
+    })
 }
 
 export default SignIn;
