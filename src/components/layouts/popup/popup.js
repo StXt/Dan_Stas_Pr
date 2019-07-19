@@ -1,7 +1,7 @@
 class PopUp {
     constructor() {
         this.closePopUpBtn = document.querySelector(".close__btn");
-        this.popUpmodal = document.querySelector(".popup");
+        this.popUpModal = document.querySelector(".popup");
     }
 
     init() {
@@ -11,13 +11,13 @@ class PopUp {
 
     toggleModal(event) {
         event.preventDefault();
-        this.popUpmodal.classList.toggle('active');
+        this.popUpModal.classList.toggle('active');
     }
 
     closeModal(event) {
         event.preventDefault();
-        if (event.target === this.popUpmodal) {
-            this.popUpmodal.classList.toggle('active');
+        if (event.target === this.popUpModal) {
+            this.popUpModal.classList.toggle('active');
         }
     }
 }

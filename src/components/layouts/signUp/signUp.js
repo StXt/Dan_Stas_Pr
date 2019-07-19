@@ -12,7 +12,7 @@ class SignUp extends PopUp {
 
     init() {
         super.init();
-        this.popUpBtn.addEventListener('click', (e) => this.openModal(e));
+        /* this.popUpBtn.addEventListener('click', (e) => this.openModal(e)); */
         this.signUpBtn.addEventListener('click', (e) => this.addUser(e));
         this.switchSignUpBtn.addEventListener('click', (e) => this.toggleForm(e));
         this.switchSignInBtn.addEventListener('click', (e) => this.toggleForm(e));
@@ -41,18 +41,17 @@ class SignUp extends PopUp {
     }
 
     toggleForm() {
-        this.signList = document.querySelectorAll('.popup');
-        this.sign = Array.prototype.slice.call(this.signList);
-        this.sign.forEach((element)=>{
-            element.classList.toggle('active')
+        const popUps = document.querySelectorAll('.popup');
+        this.signList = Array.prototype.slice.call(popUps);
+        this.signList.forEach((item)=>{
+            item.classList.toggle('active')
         })
     }
 
     openModal(event) {
         event.preventDefault();
-        this.popUpmodal.classList.toggle('active');
+        this.popUpModal.classList.toggle('active');
     }
-
 }
 
 export default SignUp;

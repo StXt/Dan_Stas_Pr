@@ -35,8 +35,8 @@ for (let elm of elements) {
 let signUp = new SignUp(".sign-up-modal");
 signUp.init();
 
-/*let signIn = new SignIn();
-signIn.init();*/
+let signIn = new SignIn();
+signIn.init();
 
 /*const observer = new Test();
 
