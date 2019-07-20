@@ -13,7 +13,7 @@ class PopUp {
         this.popUpModal.addEventListener('click', (e) => this.closeModal(e));
     }
     
-    openModal(event) {
+    openModal(event, activeForm) {
         event.preventDefault();
         if (this.popUpModal.classList.contains('active')) {
             return;
@@ -23,14 +23,12 @@ class PopUp {
     }
 
     closeModal(event) {
-        console.log('hi');
         event.preventDefault();
             if (event.target === this.popUpModal) {
                 this.popUpModal.classList.remove('active');
             } else if (event.target === this.closePopUpBtn) {
                 this.popUpModal.classList.remove('active');
             }
-        
         return;
     }
 }

@@ -1,6 +1,7 @@
 import $ from "jquery";
-import './components/layouts/signUp'
-import './components/layouts/signIn/signIn'
+
+import './components/layouts/popup'
+import './components/layouts/sign'
 import './components/layouts/header'
 import './components/layouts/spinner/spinner'
 import './components/layouts/section1/section1'
@@ -10,14 +11,16 @@ import "./index.pug"
 import  "./index.sass"
 import "../assets/img"
 // import SignUp from "./components/layouts/signUp/signUp";
-import PopUp from "./components/layouts/popup/popup";
+import PopUp from "./components/layouts/popup/popup"
+import Sign from "./components/layouts/sign/sign"
 // import SignIn from "./components/layouts/signIn/signIn";
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
 let popUp = new PopUp(".sign-up-modal", ".sign-in-modal");
 popUp.init();
-
+let sign = new Sign(".sign-up-modal", ".sign-in-modal");
+sign.init();
 /* function onEntry(entry) {
     entry.forEach((change) => {
         if(change.isIntersecting) {
