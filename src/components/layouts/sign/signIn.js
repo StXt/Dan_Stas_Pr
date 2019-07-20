@@ -1,6 +1,5 @@
 import PopUp from "../popup/popup";
 import * as firebase from 'firebase/app'
-import SignUp from "../signUp/signUp";
 import {Observable, Observer} from "./observer";
 
 const observable = new Observable();

@@ -1,24 +1,35 @@
 class PopUp {
-    constructor() {
+    constructor(signUp, signIn) {
+        this.signUp = document.querySelector(signUp);
+        this.signIn = document.querySelector(signIn);
         this.closePopUpBtn = document.querySelector(".close__btn");
-        this.popUpmodal = document.querySelector(".popup");
+        this.popUpModal = document.querySelector(".popup");
     }
 
     init() {
-        this.closePopUpBtn.addEventListener('click', (e) => this.toggleModal(e));
-        window.addEventListener('click', (e) => this.closeModal(e));
+        this.signUp.addEventListener('click', (e) => this.openModal(e));
+        this.signIn.addEventListener('click', (e) => this.openModal(e));
+        this.closePopUpBtn.addEventListener('click', (e) => this.closeModal(e));
+        this.popUpModal.addEventListener('click', (e) => this.closeModal(e));
     }
-
-    toggleModal(event) {
+    
+    openModal(event, activeForm) {
         event.preventDefault();
-        this.popUpmodal.classList.toggle('active');
+        if (this.popUpModal.classList.contains('active')) {
+            return;
+        } else {
+        this.popUpModal.classList.add('active');
+        }
     }
 
     closeModal(event) {
         event.preventDefault();
-        if (event.target === this.popUpmodal) {
-            this.popUpmodal.classList.toggle('active');
-        }
+            if (event.target === this.popUpModal) {
+                this.popUpModal.classList.remove('active');
+            } else if (event.target === this.closePopUpBtn) {
+                this.popUpModal.classList.remove('active');
+            }
+        return;
     }
 }
 
