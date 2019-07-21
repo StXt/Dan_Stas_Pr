@@ -14,7 +14,7 @@ export class Observable {
     }
 
     notify(data) {
-        this.observers.forEach(subscriber=>subscriber.notify(data))
+        this.observers.forEach(subscriber => subscriber.notify(data))
     }
 }
 
