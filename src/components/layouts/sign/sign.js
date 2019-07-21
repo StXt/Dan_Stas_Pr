@@ -2,25 +2,29 @@ import * as firebase from 'firebase/app'
 
 class Sign {
     constructor(signUp, signIn) {
+        let togglers = document.querySelectorAll('.toggler__button');
+        let togglerArr = Array.prototype.slice.call(togglers);
+        
+        this.togglerBtns = togglerArr;
         this.signUp = document.querySelector(signUp);
         this.signIn = document.querySelector(signIn);
         this.signUpForm = document.querySelector('.sign-up');
         this.signInForm = document.querySelector('.sign-in');
         this.submit = document.querySelector('.form__submit');
-        
-        let togglers = document.querySelectorAll('.toggler__button');
-        let togglerArr = Array.prototype.slice.call(togglers);
-        this.togglerBtns = togglerArr;
+
+        this.addUser = this.addUser.bind(this);
+        this.openForm = this.openForm.bind(this);
+        this.toggleForm = this.toggleForm.bind(this);
     }
 
-    init() {
+    /* init() {
         this.signUp.addEventListener('click', (e) => this.openForm(e, this.signUpForm, this.signInForm));
         this.signIn.addEventListener('click', (e) => this.openForm(e, this.signInForm,this.signUpForm));
         this.submit.addEventListener('click', (e) => this.addUser(e));      
         this.togglerBtns.forEach(item => {
             item.addEventListener('click', (e) => this.toggleForm(e));
         });
-    }
+    } */
 
 
     addUser() {
@@ -45,7 +49,7 @@ class Sign {
         this.form.reset();
     }
 
-    openForm(e, form, anotherForm) {
+    openForm(form, anotherForm) {
         if(form.classList.contains('active')) {
             return
         } else {
@@ -53,10 +57,12 @@ class Sign {
             anotherForm.classList.remove('active');
         }
     }
-    toggleForm(e) {
-        e.preventDefault();
-        this.signUpForm.classList.toggle('active');
-        this.signInForm.classList.toggle('active');
+    toggleForm(clicked) {
+        if (this.togglerBtns.includes(clicked)) {
+            this.signUpForm.classList.toggle('active');
+            this.signInForm.classList.toggle('active');
+        }
+        return
     }
 }
 

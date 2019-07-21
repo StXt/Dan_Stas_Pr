@@ -1,5 +1,6 @@
+/********************************** ALL IMPORTS ******************************************/
+/*****************************************************************************************/
 import $ from "jquery";
-
 import './components/layouts/popup'
 import './components/layouts/sign'
 import './components/layouts/header'
@@ -10,17 +11,52 @@ import './components/layouts/section3/section3'
 import "./index.pug"
 import  "./index.sass"
 import "../assets/img"
-// import SignUp from "./components/layouts/signUp/signUp";
 import PopUp from "./components/layouts/popup/popup"
 import Sign from "./components/layouts/sign/sign"
-// import SignIn from "./components/layouts/signIn/signIn";
+import {Observable, Observer} from "./components/layouts/sign/observer";
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
+/********************************* POPUP OBSERVER ****************************************/
+/*****************************************************************************************/
+let popUpObservable = new Observable();
 let popUp = new PopUp(".sign-up-modal", ".sign-in-modal");
-popUp.init();
+let openModal = new Observer(popUp.openModal);
+let closeModal = new Observer(popUp.closeModal);
+popUpObservable.subscribe(openModal);
+popUpObservable.subscribe(closeModal);
+
+window.addEventListener('click', event => {
+    event.preventDefault();
+    popUpObservable.notify(event.target);
+});
+
+/********************************** SIGN OBSERVER ****************************************/
+/*****************************************************************************************/
+let signObservable = new Observable();
 let sign = new Sign(".sign-up-modal", ".sign-in-modal");
-sign.init();
+
+function checkSign(clicked) {
+    if (clicked === sign.signUp) {
+        sign.openForm(sign.signUpForm, sign.signInForm);
+    } else if (clicked === sign.signIn) {
+        sign.openForm(sign.signInForm, sign.signUpForm);
+    }
+    return
+}
+
+let signObserver = new Observer(checkSign);
+let toggleForm = new Observer(sign.toggleForm);
+signObservable.subscribe(signObserver);
+signObservable.subscribe(toggleForm);
+
+window.addEventListener('click', event => {
+    event.preventDefault();
+    signObservable.notify(event.target);
+});
+
+
+
 /* function onEntry(entry) {
     entry.forEach((change) => {
         if(change.isIntersecting) {
