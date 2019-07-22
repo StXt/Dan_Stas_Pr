@@ -1,29 +1,26 @@
 header.header.hero.is-large#header
     .hero-head
-        nav.navbar
-            .container
-                .navbar-brand
-                    a.navbar-item
-                        img(src='./assets/img/bikezilla.png', alt='logo')
-                    span.navbar-burger.burger
-                        span
-                        span
-                        span
-                .navbar-menu
-                    .navbar-end
-                        a.navbar-item.link(href='')
-                            | Home
-                        a.navbar-item.link(href='')
-                            | Test
-                        a.navbar-item.link(href='')
-                            | Test 1
-                        a.navbar-item.link.sign-up-modal(href='')
-                            | Sign Up
-                        a.navbar-item.link.logout(href='')
-                            | Logout
-                .user
-                    //img.user__avatar(src="./assets/img/user/user-default.jpg")
+    .header-menu
+        a.logo
+            img.logo-image(src='./assets/img/bikezilla.png', alt='logo')
+        .header-menu__items
+                a.header-menu__item.sign-up-modal(href='')
+                    | Sign Up
+                a.header-menu__item.sign-in-modal(href='')
+                    | Sign In
+                a.header-menu__item(href='')
+                    | Events
+                a.header-menu__item(href='')
+                    | Services
+                a.header-menu__item.logout(href='')
+                    | Contacts
+        span.burger
+            span
+            span
+            span
+        .user
+            //img.user__avatar(src="./assets/img/user/user-default.jpg")
     .container.has-text-centered.header-container#header-container
         h2.header__title
             | Welcome to Bikezilla
-        a.button.is-warning.is-rounded.is-large.header-btn Get service
+        a.button.is-warning.is-rounded.is-large.header-btn Go to Services
