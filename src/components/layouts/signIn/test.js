@@ -1,32 +1,37 @@
-import {Observable, Observer} from './observer';
+import {Observable} from './observer';
 
-describe("observable testing", () => {
+describe("Observable", () => {
+    let observable;
+    let func;
+    let value;
 
-    it('can subscribe on observable', ()=>{
-        let observable;
-        let func;
-        beforeEach(() => {
-            func = function () {
-                alert(123);
-            }
-            observable = new Observable();
-        });
-
-        expect(observable.subscribe(func)).toContain(func);
+    beforeEach(() => {
+        func = function () {
+            alert(123);
+        };
+        observable = new Observable();
     });
 
-    it('can unsubscribe on observable', ()=>{
-        let observable;
-        let func;
+    it('can subscribe on observable', () => {
+        observable.subscribe(func);
+        expect(observable.observers).toContain(func);
+    });
 
-        beforeEach(() => {
-            func = function () {
-                alert(123);
-            }
-            observable = new Observable();
-            observable.subscribe(func);
-        });
+    it('should unsubscribe func', () => {
+        observable.subscribe(func);
+        observable.unsubscribe(func);
+        expect(observable.observers).not.toContain(func);
+    });
 
-        expect(observable.unsubscribe(func)).not.toContain(func);
+    it('should notify observers', () => {
+        value = 4;
+        func = function (value) {
+            value = value + 1;
+            return value;
+        };
+
+        observable.subscribe(func);
+        observable.notify(value);
+        expect(value).toEqual(5);
     });
 });
