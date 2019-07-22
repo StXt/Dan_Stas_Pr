@@ -1,9 +1,9 @@
-import {Observable} from '../src/components/layouts/signIn/observer';
+import {Observable} from '../src/components/layouts/sign/observer';
 
 describe("Observable", () => {
     let observable;
     let func;
-    let value;
+    let observer;
 
     beforeEach(() => {
         func = function () {
@@ -24,14 +24,11 @@ describe("Observable", () => {
     });
 
     it('should notify observers', () => {
-        value = 4;
-        func = function (value) {
-            value = value + 1;
-            return value;
-        };
+        value = 'hi';
+        observer = jasmine.createSpy('observer');
 
-        observable.subscribe(func);
+        observable.subscribe(observer);
         observable.notify(value);
-        expect(value).toEqual(5);
+        expect(observer).toHaveBeenCalled();
     });
 });
