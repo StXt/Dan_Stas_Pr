@@ -6,7 +6,7 @@ module.exports = function(config) {
         exclude: [],
         //files/patterns to load in the browser
         files: [
-            {pattern: './src/**/*test.js',watched:true,served:true,included:true},
+            {pattern: './tests/*.js',watched:true,served:true,included:true},
             // {pattern: 'src/components/sign-in/google-sign-in/*.spec.js',watched:true,served:true,included:true}
             /*parameters:
                 watched: if autoWatch is true all files that have set watched to true will be watched for changes
@@ -82,7 +82,7 @@ module.exports = function(config) {
         },
         preprocessors: {
             //add webpack as preprocessor to support require() in test-suits .js files
-            './src/**/*.js': ['webpack'],
+            './tests/*.js': ['webpack'],
             // './src/components/sign-in/google-sing-in/*.js': ['webpack','babel'],
         },
         webpackMiddleware: {

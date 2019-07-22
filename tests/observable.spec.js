@@ -1,4 +1,4 @@
-import {Observable} from './observer';
+import {Observable} from '../src/components/layouts/signIn/observer';
 
 describe("Observable", () => {
     let observable;
