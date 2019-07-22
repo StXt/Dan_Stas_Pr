@@ -4,9 +4,9 @@ import SignUp from "../signUp/signUp";
 import {Observable, Observer} from "./observer";
 
 const observable = new Observable();
-const toogleFormObserver = new Observer(f1)
+const toogleFormObserver = new Observer(f1);
 
-observable.subscribe(toogleFormObserver)
+observable.subscribe(toogleFormObserver);
 
 observable.subscribe();
 
